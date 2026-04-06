@@ -56,7 +56,7 @@
             <td>Visualización y análisis</td>
           </tr>
         </tbody>
-      dative
+      </table>
     </section>
 
     <section>
