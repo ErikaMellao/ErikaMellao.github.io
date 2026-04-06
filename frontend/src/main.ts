@@ -41,10 +41,10 @@ const app = document.querySelector<HTMLDivElement>('#root')!
 app.innerHTML = `
   <div class="container">
     
-    <section class="hero">
+    <div class="header">
       <h1>Sistema de Monitoreo Oceanográfico</h1>
       <p>Proyecto de tesis - Erika Mellao</p>
-    </section>
+    </div>
 
     <section>
       <h2>Sobre el proyecto</h2>
@@ -96,7 +96,7 @@ app.innerHTML = `
             <td>Visualización y análisis</td>
           </tr>
         </tbody>
-      </table>
+      \dative
     </section>
 
     <section>
@@ -111,6 +111,7 @@ app.innerHTML = `
 
   </div>
 `
+
 enhanceTable()
 addScrollButton()
 window.addEventListener('scroll', handleScroll)

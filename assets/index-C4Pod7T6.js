@@ -1,10 +1,10 @@
 (function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.querySelector(`table`);if(e){let t=[];e.querySelectorAll(`th`).forEach(e=>t.push(e.textContent||``)),e.querySelectorAll(`tbody tr`).forEach(e=>{e.querySelectorAll(`td`).forEach((e,n)=>{t[n]&&e.setAttribute(`data-label`,t[n])})})}}function t(){let e=document.querySelector(`.scroll-top`);e&&(window.scrollY>300?e.classList.add(`show`):e.classList.remove(`show`))}function n(){let e=document.createElement(`div`);e.className=`scroll-top`,e.innerHTML=`↑`,e.onclick=()=>window.scrollTo({top:0,behavior:`smooth`}),document.body.appendChild(e)}var r=document.querySelector(`#root`);r.innerHTML=`
   <div class="container">
     
-    <section class="hero">
+    <div class="header">
       <h1>Sistema de Monitoreo Oceanográfico</h1>
       <p>Proyecto de tesis - Erika Mellao</p>
-    </section>
+    </div>
 
     <section>
       <h2>Sobre el proyecto</h2>
@@ -56,7 +56,7 @@
             <td>Visualización y análisis</td>
           </tr>
         </tbody>
-      </table>
+      dative
     </section>
 
     <section>
