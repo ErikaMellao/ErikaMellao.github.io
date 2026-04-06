@@ -32,52 +32,6 @@ body {
     }
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 60px 40px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: "🌊";
-    position: absolute;
-    font-size: 300px;
-    opacity: 0.1;
-    bottom: -50px;
-    right: -50px;
-    transform: rotate(-15deg);
-}
-
-.hero::after {
-    content: "🔬";
-    position: absolute;
-    font-size: 200px;
-    opacity: 0.1;
-    top: -50px;
-    left: -50px;
-    transform: rotate(15deg);
-}
-
-.hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    position: relative;
-    z-index: 1;
-    animation: slideInDown 0.8s ease-out;
-}
-
-.hero p {
-    font-size: 1.3rem;
-    opacity: 0.95;
-    position: relative;
-    z-index: 1;
-    animation: slideInUp 0.8s ease-out;
-}
-
 @keyframes slideInDown {
     from {
         opacity: 0;
