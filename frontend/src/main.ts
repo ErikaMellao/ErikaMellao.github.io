@@ -1,4 +1,4 @@
-const app = document.querySelector<HTMLDivElement>('#app')!
+const app = document.querySelector<HTMLDivElement>('#root')!
 
 app.innerHTML = `
   <div class="container">
