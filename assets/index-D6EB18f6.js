@@ -1,44 +1,4 @@
-function enhanceTable(): void {
-    const table = document.querySelector('table');
-    if (table) {
-        const headers: string[] = [];
-        const ths = table.querySelectorAll('th');
-        ths.forEach(th => headers.push(th.textContent || ''));
-        
-        const rows = table.querySelectorAll('tbody tr');
-        rows.forEach(row => {
-            const cells = row.querySelectorAll('td');
-            cells.forEach((cell, index) => {
-                if (headers[index]) {
-                    cell.setAttribute('data-label', headers[index]);
-                }
-            });
-        });
-    }
-}
-
-function handleScroll(): void {
-    const scrollBtn = document.querySelector('.scroll-top');
-    if (scrollBtn) {
-        if (window.scrollY > 300) {
-            scrollBtn.classList.add('show');
-        } else {
-            scrollBtn.classList.remove('show');
-        }
-    }
-}
-
-function addScrollButton(): void {
-    const button = document.createElement('div');
-    button.className = 'scroll-top';
-    button.innerHTML = '↑';
-    button.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
-    document.body.appendChild(button);
-}
-
-const app = document.querySelector<HTMLDivElement>('#root')!
-
-app.innerHTML = `
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.querySelector(`table`);if(e){let t=[];e.querySelectorAll(`th`).forEach(e=>t.push(e.textContent||``)),e.querySelectorAll(`tbody tr`).forEach(e=>{e.querySelectorAll(`td`).forEach((e,n)=>{t[n]&&e.setAttribute(`data-label`,t[n])})})}}function t(){let e=document.querySelector(`.scroll-top`);e&&(window.scrollY>300?e.classList.add(`show`):e.classList.remove(`show`))}function n(){let e=document.createElement(`div`);e.className=`scroll-top`,e.innerHTML=`↑`,e.onclick=()=>window.scrollTo({top:0,behavior:`smooth`}),document.body.appendChild(e)}var r=document.querySelector(`#root`);r.innerHTML=`
   <div class="container">
     
     <section class="hero">
@@ -110,8 +70,4 @@ app.innerHTML = `
     </section>
 
   </div>
-`
-enhanceTable()
-addScrollButton()
-window.addEventListener('scroll', handleScroll)
-handleScroll()
+`,e(),n(),window.addEventListener(`scroll`,t),t();
