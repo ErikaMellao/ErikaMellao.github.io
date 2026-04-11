@@ -29,7 +29,7 @@ app.innerHTML = `
     </ul>
   </nav>
     <div class="contenedorTitulo">
-      <img src="/public/blueOcean.jpg" class="imagenInicio">
+      <img src="/blueOcean.jpg" class="imagenInicio">
       <svg class="wave" viewBox="0 0 1440 150" preserveAspectRatio="none">
         <path d="M0,100 C200,50 400,150 600,100 C800,50 1000,150 1200,100 C1300,80 1400,120 1440,100 L1440,150 L0,150 Z"></path>
       </svg>
