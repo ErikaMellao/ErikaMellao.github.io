@@ -48,7 +48,7 @@ app.innerHTML = `
           almacenamiento y visualización de datos oceanográficos y estados de instrumentos.
         </p>
       </section>
-      <img src="/public/instrumento.png" alt="Instrumento oceanográfico" class="instrumentoImagen">
+      <img src="/instrumento.png" alt="Instrumento oceanográfico" class="instrumentoImagen">
     </div>
     
   <div class = "contenedorApps">
