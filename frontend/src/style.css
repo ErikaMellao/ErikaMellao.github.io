@@ -207,7 +207,6 @@ table {
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
-
 th {
     background: linear-gradient(135deg, #1e3a5f, #2d3a6f);
     color: #e2e8f0;
