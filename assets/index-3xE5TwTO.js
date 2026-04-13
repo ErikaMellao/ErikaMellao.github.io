@@ -1,11 +1,6 @@
 (function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.querySelector(`table`);if(e){let t=[];e.querySelectorAll(`th`).forEach(e=>t.push(e.textContent||``)),e.querySelectorAll(`tbody tr`).forEach(e=>{e.querySelectorAll(`td`).forEach((e,n)=>{t[n]&&e.setAttribute(`data-label`,t[n])})})}}var t=document.querySelector(`#root`);t.innerHTML=`
   <nav class = "navbar">
     <div class ="logo">CIOAPP</div>
-    <ul class="nav-links">
-      <a href="Proyecto">Sobre nosotros</a>
-      <a href="AplicaciónMovil">Aplicación Móvil</a>
-      <a href="AplicaciónWeb">Aplicación Web</a>
-    </ul>
   </nav>
     <div class="contenedorTitulo">
       <img src="/blueOcean.jpg" class="imagenInicio">
@@ -14,7 +9,7 @@
       </svg>
       
       <div class="contenidoTitulo">
-        <h1>Sistema Híbrido: Adquisición, Visualización y Almacenamiento de Datos mediante Aplicación Móvil y Web</h1>
+        <h1>Sistema Híbrido para el Centro de Instrumentación Oceanográfica: Adquisición, Visualización y Almacenamiento de Datos mediante Aplicación Móvil y Web</h1>
         <p>Proyecto de tesis - Erika Mellao Jara</p>
       </div>
     </div>
@@ -56,36 +51,49 @@
       <img src="/computador.png" alt="Computador" class="imagenComputador">
     </section>
   </div>
-    
+
   <section class="funcionalidades">
-    <h2>Principales funcionalidades</h2>
-    <div class="funcionalidades-grid">
+      <h2>Principales funcionalidades</h2>
+      <div class="funcionalidades-grid">
+        
+        <div class="funcionalidades-card">
+          <i class="fas fa-bluetooth-b funcionalidad-icon"></i>
+          <h3>Transferencia de datos vía BLE</h3>
+          <p>
+            Permite la comunicación inalámbrica entre los instrumentos 
+            oceanográficos y la aplicación móvil mediante Bluetooth Low Energy, 
+            facilitando la adquisición de datos en terreno sin necesidad de 
+            conexiones físicas.
+          </p>
+        </div>
+
       <div class="funcionalidades-card">
-        <i class="fas fa-box-open funcionalidad-icon"></i>
-        <h3>Transferencia de datos en paquetes pequeños</h3>
-        <p>completar
+        <i class="fas fa-database funcionalidad-icon"></i>
+        <h3>Almacenamiento local de datos</h3>
+        <p>
+          Los datos adquiridos se almacenan directamente en el dispositivo 
+          móvil, asegurando su disponibilidad inmediata incluso en entornos 
+          sin conectividad y reduciendo el riesgo de pérdida de información.
         </p>
       </div>
 
       <div class="funcionalidades-card">
-        <i class="fas fa-check-double funcionalidad-icon"></i>
-        <h3>Integridad y validación de datos</h3>
-        <p>completar
+        <i class="fas fa-chart-line funcionalidad-icon"></i>
+        <h3>Visualización temprana de datos</h3>
+        <p>
+          Permite visualizar mediciones y el estado del instrumento en tiempo 
+          real en la aplicación móvil, facilitando la validación de datos y la 
+          detección temprana de posibles fallas en terreno.
         </p>
       </div>
 
       <div class="funcionalidades-card">
-        <i class="fas fa-sync-alt funcionalidad-icon"></i>
-        <h3>Sincronización entre dispositivos</h3>
-        <p>completar</p>
-      </div>
-
-      <div class="funcionalidades-card">
-        <i class="fas fa-plug funcionalidad-icon"></i>
-        <h3>Reestablecer conexiones</h3>
-        <p>Manejo de pérdidas de conexión BLE o USB, 
-        capacidad de reconexión automática, reanudación 
-        de transferencias desde el punto de interrupción
+        <i class="fas fa-desktop funcionalidad-icon"></i>
+        <h3>Dashboard web y reportes</h3>
+        <p>
+          A través de una conexión USB/Serial, los datos son transferidos a 
+          una aplicación web que permite su visualización mediante gráficos 
+          temporales y la generación de reportes para análisis detallado.
         </p>
       </div>
     </div>
@@ -96,7 +104,7 @@
     <div class="beneficios-grid">
       <div class="beneficio-card">
         <i class="fas fa-clock beneficio-icon"></i>
-        <h3>Reducción de tiempos de transferencia de datos</h3>
+        <h3>Reducción de tiempos de transferencia</h3>
         <p>La automatización del proceso elimina la intervención
           manual, permitiendo que los datos estén disponibles 
           casi en tiempo real.
@@ -104,24 +112,24 @@
       </div>
 
       <div class="beneficio-card">
-        <i class="fas fa-shield-alt beneficio-icon"></i>
-        <h3>Resiliencia ante interrupciones</h3>
-        <p>El sistema implementa mecanismos de reintento y reconstrucción de
-        datos, asegurando que cortes de conexión no resulten 
-        en pérdida de información.
+        <i class="fas fa-user-shield beneficio-icon"></i>
+        <h3>Disminución de errores humanos</h3>
+        <p>Reduce la manipulación manual de datos, 
+        evitando pérdidas, corrupción o inconsistencias.
         </p>
       </div>
 
       <div class="beneficio-card">
-        <i class="fas fa-chart-line beneficio-icon"></i>
-        <h3>Sistema adaptado</h3>
-        <p>El sistema está diseñado específicamente para integrarse con los 
-        dispositivos desarrollados internamente por el Área de Desarrollo 
-        Tecnológico del CIO.</p>
+        <i class="fas fa-exclamation-triangle beneficio-icon"></i>
+        <h3>Detección temprana de fallas</h3>
+        <p>Permite identificar problemas en los instrumentos o 
+          en los datos directamente en terreno, evitando 
+          pérdidas de campañas completas.
+        </p>
       </div>
 
       <div class="beneficio-card">
-        <i class="fas fa-microchip beneficio-icon"></i>
+        <i class="fas fa-cogs beneficio-icon"></i>
         <h3>Autonomía tecnológica</h3>
         <p>Dejar de depender de soluciones externas y desarrollar capacidad 
           propia para resolver desafíos específicos.
@@ -140,19 +148,33 @@
           <i class="fas fa-envelope"></i>
           <span>erika.mellao2301@alumnos.ubiobio.cl</span>
         </div>
-        <p>Te responderé lo antes posible.</p>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="creditos">
-        <h3>Créditos</h3>
-        <a href="https://www.flaticon.es/iconos-gratis/ola" title="ola iconos">Ola iconos creados por iconixar - Flaticon</a>
-        <a href="https://www.freepik.com" target="_blank"> Diseñado por Freepik </a>
-      </div>
-      <div class="derechos">
-        <p>&copy; 2026 Erika Mellao Jara.</p>
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-col">
+        <h3>Proyecto</h3>
         <p>Sistema Híbrido para el Centro de Instrumentación Oceanográfica</p>
       </div>
-    </footer>
+
+      <div class="footer-col">
+        <h3>Créditos</h3>
+        <a href="https://www.flaticon.es/iconos-gratis/ola" target="_blank">
+          Iconos por Iconixar - Flaticon
+        </a>
+        <a href="https://www.freepik.com" target="_blank">
+          Diseñado por Freepik
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Autora</h3>
+        <p>Erika Mellao Jara</p>
+        <p>&copy; 2026</p>
+      </div>
+
+    </div>
+</footer>
 `,e();
